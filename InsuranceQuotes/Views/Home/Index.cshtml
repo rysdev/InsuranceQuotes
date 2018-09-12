@@ -1,0 +1,230 @@
+﻿<div class="row no-gutters m-3 pt-5">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Find Your Insurance Rate</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("CalcRate", "Home", FormMethod.Post))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="firstName" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob" class="col-sm-2 control-label">Date of Birth</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="dob" id="dob" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5 class="pt-2">Vehicle Information (Make Required)</h5>
+                        <label for="make" class="col-sm-2 control-label">Make</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="make1" id="make1" placeholder="Make" required>
+                        </div>
+                        <label for="model" class="col-sm-2 control-label">Model</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="model1" id="model1" placeholder="Model" required>
+                        </div>
+                        <label for="carYear" class="col-sm-2 control-label">Year (yyyy format only)</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="carYear1" id="carYear1">
+                        </div>
+                        <label for="coverage" class="col-sm-2 control-label">What kind of coverage would you like for this car?</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="coverage1" id="coverage1">
+                                <option value="0">Full Coverage</option>
+                                <option value="1">Liability</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10 mb-4">
+                        <a class="btn btn-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add a second vehicle?</a>
+                    </div>
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="form-group">
+                            <h5>Vehicle Information</h5>
+                            <label for="make" class="col-sm-2 control-label">Make</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="make2" id="make2" placeholder="Required input">
+                            </div>
+                            <label for="model" class="col-sm-2 control-label">Model</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="model2" id="model2" placeholder="Model">
+                            </div>
+                            <label for="carYear" class="col-sm-2 control-label">Year (yyyy format only)</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="carYear2" id="carYear2">
+                            </div>
+                            <label for="coverage" class="col-sm-2 control-label">What kind of coverage would you like for this car?</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="coverage2" id="coverage2">
+                                    <option value="0">Full Coverage</option>
+                                    <option value="1">Liability</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10 mb-4">
+                        <a class="btn btn-info" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Add a third vehicle?</a>
+                    </div>
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="form-group">
+                            <h5>Vehicle Information</h5>
+                            <label for="make" class="col-sm-2 control-label">Make</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="make3" id="make3" placeholder="Required input">
+                            </div>
+                            <label for="model" class="col-sm-2 control-label">Model</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="model3" id="model3" placeholder="Model">
+                            </div>
+                            <label for="carYear" class="col-sm-2 control-label">Year (yyyy format only)</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="carYear3" id="carYear3">
+                            </div>
+                            <label for="coverage" class="col-sm-2 control-label">What kind of coverage would you like for this car?</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="coverage3" id="coverage3">
+                                    <option value="0">Full Coverage</option>
+                                    <option value="1">Liability</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Driving Record Information</h5>
+                    <div class="form-group">
+                        <label for="ticketToggle" class="col-sm-2 control-label">Have many moving violations are currently on your record?</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="ticketToggle" id="ticketToggle">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticket1" class="col-sm-2 control-label">Please provide the dates of the most recent violation(s). </label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="ticket1" id="ticket1" disabled>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="ticket2" id="ticket2" disabled>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="ticket3" id="ticket3" disabled>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="ticket4" id="ticket4" disabled>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="ticket5" id="ticket5" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="duiToggle" class="col-sm-2 control-label">Have you ever had a DUI?</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="duiToggle" id="duiToggle">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dui" class="col-sm-2 control-label">Issue Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="dui" id="dui" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-info">Find My Rate</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@*
+    <div>
+        @Html.ActionLink("Admin View", "Index", "Admin")
+    </div>
+*@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("select[name='duiToggle']").on('change', function () {
+            if ($(this).val() === "1") {
+                $("input[name='dui']").prop("disabled", false);
+            } else {
+                $("input[name='dui']").prop("disabled", true);
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $("select[name='ticketToggle']").on('change', function () {
+            if ($(this).val() === "1") {
+                $("input[name='ticket1']").prop("disabled", false);
+                $("input[name='ticket2']").prop("disabled", true);
+                $("input[name='ticket3']").prop("disabled", true);
+                $("input[name='ticket4']").prop("disabled", true);
+                $("input[name='ticket5']").prop("disabled", true);
+            }
+            else if ($(this).val() === "2") {
+                $("input[name='ticket1']").prop("disabled", false);
+                $("input[name='ticket2']").prop("disabled", false);
+                $("input[name='ticket3']").prop("disabled", true);
+                $("input[name='ticket4']").prop("disabled", true);
+                $("input[name='ticket5']").prop("disabled", true);
+            }
+            else if ($(this).val() === "3") {
+                $("input[name='ticket1']").prop("disabled", false);
+                $("input[name='ticket2']").prop("disabled", false);
+                $("input[name='ticket3']").prop("disabled", false);
+                $("input[name='ticket4']").prop("disabled", true);
+                $("input[name='ticket5']").prop("disabled", true);
+            }
+            else if ($(this).val() === "4") {
+                $("input[name='ticket1']").prop("disabled", false);
+                $("input[name='ticket2']").prop("disabled", false);
+                $("input[name='ticket3']").prop("disabled", false);
+                $("input[name='ticket4']").prop("disabled", false);
+                $("input[name='ticket5']").prop("disabled", true);
+            }
+            else if ($(this).val() === "5") {
+                $("input[name='ticket1']").prop("disabled", false);
+                $("input[name='ticket2']").prop("disabled", false);
+                $("input[name='ticket3']").prop("disabled", false);
+                $("input[name='ticket4']").prop("disabled", false);
+                $("input[name='ticket5']").prop("disabled", false);
+            } else {
+                $("input[name='ticket1']").prop("disabled", true);
+                $("input[name='ticket2']").prop("disabled", true);
+                $("input[name='ticket3']").prop("disabled", true);
+                $("input[name='ticket4']").prop("disabled", true);
+                $("input[name='ticket5']").prop("disabled", true);
+            }
+        });
+    });
+
+</script>

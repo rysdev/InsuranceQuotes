@@ -1,0 +1,125 @@
+﻿@model InsuranceQuotes.ViewModels.LookupViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Account Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumCars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumCars)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Points)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Points)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dui)
+        </dt>
+
+        <dd>
+            @Model.Dui.ToString()
+        </dd>
+
+    </dl>
+</div>
+<br />
+<div>
+    <h2>Cars</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                Make
+            </th>
+            <th>
+                Model
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+                Policy Issued
+            </th>
+            <th>
+                Rate per Car
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var car in Model.Cars)
+        {
+            <tr>
+                <td>
+                    @car.Make
+                </td>
+                <td>
+                    @car.Model
+                </td>
+                <td>
+                    @car.Year
+                </td>
+                <td>
+                    @car.IssueDate
+                </td>
+                <td>
+                    @car.Rate
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<br />
+<div>
+    <h2>
+        @Html.DisplayNameFor(model => model.TotalRate)
+    </h2>
+
+    <p>(5% discount applied for each additional car)</p>
+
+    <h3>
+        @Html.DisplayFor(model => model.TotalRate)
+    </h3>
+</div>
+<br />
+<br />
+<p>
+    @Html.ActionLink("Back to Home", "Index")
+</p>

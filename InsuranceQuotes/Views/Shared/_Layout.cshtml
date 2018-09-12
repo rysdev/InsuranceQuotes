@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Find Your Insurance Rate</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="row no-gutters">
+        <div class="col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+            <nav class="navbar navbar-light bg-light justify-content-between">
+                <a href="/Home" class="navbar-brand">RYS Insurance</a>
+                @using (Html.BeginForm("LookupRate", "Home", FormMethod.Get))
+                {
+                    <form class="form-inline">
+                        <div class="form-group mr-8">
+                            <input class="mr-sm-2" type="email" name="lookupEmail" placeholder="Email">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Look Up Quote</button>
+                        </div>
+                    </form>
+                }
+            </nav>
+        </div>
+    </div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
