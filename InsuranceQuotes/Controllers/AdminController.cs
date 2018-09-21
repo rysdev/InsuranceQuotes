@@ -1,11 +1,11 @@
-﻿using InsuranceGenerator.ViewModels;
+﻿using InsuranceQuotes.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace InsuranceGenerator.Controllers
+namespace InsuranceQuotes.Controllers
 {
     public class AdminController : Controller
     {

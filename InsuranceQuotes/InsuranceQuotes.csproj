@@ -160,6 +160,7 @@
     <Compile Include="Car.cs">
       <DependentUpon>InsuranceEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -292,6 +293,7 @@
     <Content Include="Views\Home\NoAccountError.cshtml" />
     <Content Include="Views\Home\Success.cshtml" />
     <Content Include="Views\Home\YearError.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
