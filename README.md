@@ -3,7 +3,7 @@ ASP.NET web application connecting to MS SQL server instance.
 
 This application simulates a quote generator for a car insurance company.
 
-The outcome of the quote depends on the following:
+Adjusts based on:
 * Type of car
 * Year of the car
 * Age of the driver
