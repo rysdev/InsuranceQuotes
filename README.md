@@ -7,7 +7,7 @@ Rate adjusts based on:
 * Type of car
 * Year of the car
 * Age of the driver
-* Driving record of the driver
+* Driving record
 * How many cars
 * What type of coverage needed for each car
 
