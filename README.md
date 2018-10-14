@@ -8,7 +8,7 @@ Rate adjusts based on:
 * Year of the car
 * Age of the driver
 * Driving record
-* How many cars
+* Number of cars
 * What type of coverage needed for each car
 
 Application hosted at: http://rysinsurance.us-west-2.elasticbeanstalk.com/Home
