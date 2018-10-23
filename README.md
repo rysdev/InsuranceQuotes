@@ -1,7 +1,7 @@
 # InsuranceQuotes
 ASP.NET web application connecting to MS SQL server instance.
 
-This application simulates a quote generator for a car insurance company.
+Simulates a quote generator for a car insurance company.
 
 Rate adjusts based on:
 * Make/Model of the car
