@@ -10,5 +10,3 @@ Quoted rate varies by:
 * Driving record
 * Number of cars
 * Coverage type
-
-Application hosted at: http://rysinsurance.us-west-2.elasticbeanstalk.com/Home
