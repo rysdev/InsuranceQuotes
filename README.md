@@ -1,5 +1,5 @@
 # InsuranceQuotes
-ASP.NET web application connecting to MS SQL DB.
+ASP.NET web application connecting to MS SQL DB
 
 Simulates a quote generator for a car insurance company.
 
